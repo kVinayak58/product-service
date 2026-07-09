@@ -11,7 +11,7 @@ on:
       - main
 
 jobs:
-  ci:
+  checks:
     uses: kVinayak58/platform-config/.github/workflows/python-microservice-ci.yml@main
     with:
       service_name: product-service
