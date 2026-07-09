@@ -21,6 +21,8 @@ flask run
 
 This is a **standalone Git repository**. The `Jenkinsfile` calls `platform-shared-library` and checks out `helm-charts` + `platform-config` at build time via `checkoutPlatformDeps()`.
 
+GitHub Actions: `.github/workflows/ci.yml` runs tests, Trivy, and ECR push (reusable workflow from `platform-config`).
+
 Promotion flow: Dev → QA → UAT → Prod using the **same image digest** (BOMP).
 
 ## Related repos

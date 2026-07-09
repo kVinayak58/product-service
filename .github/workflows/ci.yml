@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  ci:
+    uses: kVinayak58/platform-config/.github/workflows/python-microservice-ci.yml@main
+    with:
+      service_name: product-service
+      ecr_repository: shopeasy-product-service
+    secrets: inherit
