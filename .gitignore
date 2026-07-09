@@ -1,0 +1,9 @@
+# Python service .gitignore
+__pycache__/
+*.pyc
+venv/
+.env
+.pytest_cache/
+reports/
+*.log
+.DS_Store
